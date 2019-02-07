@@ -75,7 +75,7 @@ export default {
       </li>
 </div>
 ```
-***Resource* pertanyaan dan jawaban**.
+***Resource* pertanyaan dan jawaban**. Untuk mengecek benar atau salahnya suatu jawaban, ditambahkan variabel **benar** dengan nilai **true**
 ```javascript
 soal : [
         {
@@ -111,7 +111,7 @@ Menampilkan **nomor** beserta **pertanyaan** :
 
 
 #### 
-Untuk menampung soal-soal beserta jawabannya, ditampung di dalam sebuah array :
+pada **line** ke-3,  akan mencek apakah jawaban benar. Jika iya, maka akan menambahkan data yang benar ke **array** jawabanBenar dengan method **push** dan menambahkan skor/nilai sebesar 10. Jika salah, maka akan me-**remove** data dengan menggunakan method **splice**.
 ```javascript
 addScore: function(indexsoal, indexpilihan){
       this.isMessageEnabled = true;
@@ -128,30 +128,3 @@ addScore: function(indexsoal, indexpilihan){
       }
     }
 ```
-Untuk mengecek benar atau salahnya suatu jawaban, ditambahkan variabel **benar** dengan nilai **true**
-```javascript
-list_jawaban : [
-           {jawaban : 'Soekarno', benar: true},
-           {jawaban : 'Soeharto'},
-		   ....
-]
-```
-
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
