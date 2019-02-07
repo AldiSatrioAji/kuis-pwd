@@ -36,7 +36,7 @@ export default {
     return {
       skor : 0,
 	  .......
-	  }
+	}
   }
  </script>
 ```
@@ -45,8 +45,8 @@ export default {
 Jika nilai/skor lebih dari **70** maka akan menampilkan keterangan **Kamu Lulus** sebaliknya maka akan menampilkan keterangan **Ayo Semangat!**. variabel **isMessageEnabled** berperan untuk menampilkan **keterangan** apabila user meng-klik pertama kali jawabannya. Hal ini untuk mencegah user melihat keterangannya terlebih dahulu sebelum memilih jawaban pertamanya  :
 ```html
 <template v-if="isMessageEnabled">
-      <h1 v-if="skor > 70">Kamu lulus!</h1>
-      <h1 v-else>Ayo Semangat!</h1>
+	<h1 v-if="skor > 70">Kamu lulus!</h1>
+	<h1 v-else>Ayo Semangat!</h1>
 </template>
 ```
 Inisialisasikan variabel **isMessageEnabled** di **script** :
@@ -58,7 +58,7 @@ export default {
     return {
       skor : 0,
 	  isMessageEnabled: false,
-	  }
+	}
   }
  </script>
 ```
@@ -98,14 +98,14 @@ nilai **item** merujuk ke sebuah **objek** **pertanyaan**, sedangkan **index** m
 Menampilkan **nomor** beserta **pertanyaan** : 
 ```html
 <h2>
-        {{ item.index }}.
-        {{ item.pertanyaan }}
+	{{ item.index }}.
+	{{ item.pertanyaan }}
 </h2>
 ```
 ***Mapping*** jawaban. Event **@click** untuk menerapkan aksi klik pada radio button dan akan memanggil sekaligus mem-***passing***  data **index** dan **index2** ke method **addScore()** yang nantinya akan men-**set** nilai variabel **skor**.
 ```javascript
 <li v-for="(opsi, index2) in item.list_jawaban" :key="index2">
-	<input type="radio" :name="index" @click="addScore(index, index2)" :value="opsi"> {{ opsi.jawaban }}
+<input type="radio" :name="index" @click="addScore(index, index2)" :value="opsi"> {{ opsi.jawaban }}
 </li>
 ```
 
