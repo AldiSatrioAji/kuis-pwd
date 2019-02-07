@@ -36,7 +36,7 @@ export default {
     return {
       skor : 0,
 	  .......
-	}
+	  }
   }
  </script>
 ```
@@ -57,9 +57,9 @@ export default {
   data () {
     return {
       skor : 0,
-	  isMessageEnabled: false,
+	    isMessageEnabled: false,
 	}
-  }
+ }
  </script>
 ```
 #### Menampilkan pertanyaan
@@ -98,14 +98,14 @@ nilai **item** merujuk ke sebuah **objek** **pertanyaan**, sedangkan **index** m
 Menampilkan **nomor** beserta **pertanyaan** : 
 ```html
 <h2>
-	{{ item.index }}.
-	{{ item.pertanyaan }}
+  {{ item.index }}.
+  {{ item.pertanyaan }}
 </h2>
 ```
 ***Mapping*** jawaban. Event **@click** untuk menerapkan aksi klik pada radio button dan akan memanggil sekaligus mem-***passing***  data **index** dan **index2** ke method **addScore()** yang nantinya akan men-**set** nilai variabel **skor**.
 ```javascript
 <li v-for="(opsi, index2) in item.list_jawaban" :key="index2">
-<input type="radio" :name="index" @click="addScore(index, index2)" :value="opsi"> {{ opsi.jawaban }}
+	<input type="radio" :name="index" @click="addScore(index, index2)" :value="opsi"> {{ opsi.jawaban }}
 </li>
 ```
 
