@@ -22,7 +22,7 @@ $ npm run dev
 ```
 
 ## Bedah kode
-####Menampilkan skor
+#### Menampilkan skor
 Untuk menampilkan jumlah skor yang didapat, panggil nama variabel nya di dalam **double kurung kurawal** :
 ```html
 <h1>Skor : {{ skor }}</h1>
@@ -41,7 +41,7 @@ export default {
  </script>
 ```
 
-####Menampilkan keterangan
+#### Menampilkan keterangan
 Jika nilai/skor lebih dari **70** maka akan menampilkan keterangan **Kamu Lulus** sebaliknya maka akan menampilkan keterangan **Ayo Semangat!**. variabel **isMessageEnabled** berperan untuk menampilkan **keterangan** apabila user meng-klik pertama kali jawabannya. Hal ini untuk mencegah user melihat keterangannya terlebih dahulu sebelum memilih jawaban pertamanya  :
 ```html
 <template v-if="isMessageEnabled">
@@ -62,7 +62,7 @@ export default {
   }
  </script>
 ```
-####Menampilkan pertanyaan
+#### Menampilkan pertanyaan
 ***Mapping*** pertanyaan menggunakan **v-for** :
 ```html
 <div v-for="(item, index) in soal" :key="index">
@@ -135,6 +135,8 @@ list_jawaban : [
            {jawaban : 'Soeharto'},
 		   ....
 ]
+```
+
 
 ## Build Setup
 
