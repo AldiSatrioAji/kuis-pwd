@@ -122,9 +122,6 @@ export default {
     }
   },
   methods : {
-    pertanyaanNumber: function(index) {
-      return index + 1;
-    },
     addJawabanBenar: function(list) {
       this.jawabanBenar.push(list);
     },
